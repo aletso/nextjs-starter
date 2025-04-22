@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function ApiPage() {
   return (
     <Fragment>
-      <header className="pt-16 flex gap-8 items-end">
+      <header className="pt-16">
         <h1 className="font-bold text-4xl">API — tRPC</h1>
       </header>
       <section>
