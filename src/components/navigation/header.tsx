@@ -4,27 +4,40 @@ import { Fragment } from 'react';
 import { LogOutButton } from '../auth/logout-button';
 import { Button } from '../ui/button';
 
+const navigationItems = [
+  {
+    label: 'Home',
+    href: '/',
+  },
+  {
+    label: 'API',
+    href: '/api',
+  },
+  {
+    label: 'Auth',
+    href: '/auth',
+  },
+  {
+    label: 'Database',
+    href: '/database',
+  },
+  {
+    label: 'UI',
+    href: '/ui',
+  },
+];
+
 export default async function Header() {
   const session = await getServerSession();
 
   return (
     <header className="px-gutter h-header fixed top-0 inset-x-0 z-10 grid grid-cols-[1fr_auto_1fr] items-center">
       <nav aria-label="Main navigation" className="flex items-center gap-6 text-sm">
-        <Link href="/" className="hover:underline">
-          Home
-        </Link>
-        <Link href="/api" className="hover:underline">
-          API
-        </Link>
-        <Link href="/auth" className="hover:underline">
-          Auth
-        </Link>
-        <Link href="/database" className="hover:underline">
-          Database
-        </Link>
-        <Link href="/styling" className="hover:underline">
-          Styling
-        </Link>
+        {navigationItems.map((item, index) => (
+          <Link key={index} href={item.href} className="hover:underline">
+            {item.label}
+          </Link>
+        ))}
       </nav>
       <p className="text-xs">Header</p>
       <nav
