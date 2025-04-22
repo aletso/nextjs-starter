@@ -1,30 +1,13 @@
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { getServerSession } from '@/server/auth/utils';
-import { api, HydrateClient } from '@/trpc/server';
 import Link from 'next/link';
+import { Fragment } from 'react';
 import AuthenticationCard from './_components/authentication-card';
 import { DatabaseCard } from './_components/database-card';
 import TrpcCard from './_components/trpc-card';
 import { UiCard } from './_components/ui-card';
 
 export default async function Home() {
-  const hello = await api.post.hello({ text: 'from tRPC' });
-  const session = await getServerSession();
-
-  if (session?.user) {
-    void api.post.getLatest.prefetch();
-  }
-
   return (
-    <HydrateClient>
+    <Fragment>
       <section className="row-start-2 text-center pt-16">
         <h1>Next.js starter template</h1>
         <p className="font-light">
@@ -40,6 +23,6 @@ export default async function Home() {
         <DatabaseCard />
         <UiCard />
       </section>
-    </HydrateClient>
+    </Fragment>
   );
 }

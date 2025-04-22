@@ -30,7 +30,7 @@ export function UiCard() {
     <Card className="pb-3">
       <CardHeader className="gap-0">
         <CardTitle>
-          <Link href="/styling" className="hover:underline">
+          <Link href="/ui" className="hover:underline">
             UI — Shadcn & Tailwind
           </Link>
         </CardTitle>
