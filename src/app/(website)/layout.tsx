@@ -6,7 +6,7 @@ export default function WebsiteLayout({ children }: { children: React.ReactNode 
   return (
     <Fragment>
       <Header />
-      <main className="bg-background px-gutter h-[calc(100vh-var(--spacing-header))] min-h-[calc(100vh-var(--spacing-footer))] pt-header">
+      <main className="bg-background px-gutter h-full min-h-[calc(100vh-var(--spacing-footer))] pt-header">
         {children}
       </main>
       <Footer />

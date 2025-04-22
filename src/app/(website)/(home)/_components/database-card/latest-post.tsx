@@ -63,6 +63,7 @@ export function LatestPost() {
                 <FormControl>
                   <Input id="name" placeholder="Title" className="bg-white" {...field} />
                 </FormControl>
+                <p className="text-xs text-muted-foreground">/api/trpc/post.create</p>
                 <FormMessage />
               </FormItem>
             )}
