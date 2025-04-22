@@ -7,7 +7,7 @@ export default function StylingPage() {
   return (
     <Fragment>
       <header className="pt-16">
-        <h1 className="font-bold text-4xl">Styling — Shadcn & Tailwind</h1>
+        <h1 className="font-bold text-4xl">UI — Shadcn & Tailwind</h1>
       </header>
       <section className="flex gap-1.5">
         <Button asChild variant="outline" size="sm">
