@@ -43,10 +43,9 @@ export function LatestPost() {
     <Fragment>
       {latestPost ? (
         <div>
-          <p className="font-medium">Your most recent post:</p>
-          <div className="text-sm border-l border-muted-foreground pl-2">
-            <p className="text-sm">{latestPost.name}</p>
-          </div>
+          <h3 className="text-base font-medium">Your most recent post</h3>
+          <p className="text-xs text-muted-foreground">/api/trpc/post.getLatest</p>
+          <p className="text-sm border-l border-muted-foreground pl-2 italic">{latestPost.name}</p>
         </div>
       ) : (
         <p className="font-medium">You have no posts yet.</p>

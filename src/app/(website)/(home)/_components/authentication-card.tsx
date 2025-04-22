@@ -1,14 +1,7 @@
 import { LogOutButton } from '@/components/auth/logout-button';
 import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { getServerSession } from '@/server/auth/utils';
 import Link from 'next/link';
 import { Fragment } from 'react';
@@ -39,6 +32,7 @@ export default async function AuthenticationCard() {
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="sm:max-w-3xl">
+                    <DialogTitle>Session object</DialogTitle>
                     <pre className="whitespace-pre-wrap overflow-auto max-h-[80vh] text-sm">
                       {JSON.stringify(session, null, 2)}
                     </pre>

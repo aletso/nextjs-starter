@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, buttonVariants } from '@/components/ui/button';
+import { Button, type buttonVariants } from '@/components/ui/button';
 import { authClient } from '@/lib/auth-client';
 import { cn } from '@/lib/utils';
 import { type VariantProps } from 'class-variance-authority';
@@ -15,7 +15,7 @@ export function LogOutButton({
   const router = useRouter();
 
   const onClick = () => {
-    authClient.signOut().then(() => {
+    void authClient.signOut().then(() => {
       router.refresh();
     });
   };

@@ -34,7 +34,7 @@ export function RegisterForm({ className, ...props }: React.ComponentProps<'div'
 
   const router = useRouter();
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get('callbackUrl') || '/';
+  const callbackUrl = searchParams.get('callbackUrl') ?? '/';
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),

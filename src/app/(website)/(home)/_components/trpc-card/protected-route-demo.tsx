@@ -25,11 +25,8 @@ export function ProtectedRouteDemo() {
   const { data, error } = api.post.getSecretMessage.useQuery();
 
   return (
-    <div className="text-sm border-l border-muted-foreground pl-2">
-      Response:{' '}
-      <span className="italic">
-        "{data ? data : error ? error.message : 'tRPC failed, retrying... '}"
-      </span>
+    <div className="text-sm border-l border-muted-foreground pl-2 italic">
+      {data ?? (error ? error.message : 'tRPC failed, retrying... ')}
     </div>
   );
 }

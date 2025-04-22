@@ -38,14 +38,17 @@ export function UiCard() {
       </CardHeader>
       <CardContent className="grow px-3 flex flex-col">
         <div className="p-3 flex-1 justify-between inset-shadow-sm rounded-md border bg-background">
-          <Label>Dark mode</Label>
+          <Label htmlFor="dark-mode-toggle" className="text-xs">
+            Dark mode
+          </Label>
           <Button
+            id="dark-mode-toggle"
             variant="outline"
             size="icon"
             onClick={toggleDarkMode}
             aria-label="Toggle dark mode"
           >
-            {isDark ? <SunIcon className="h-4 w-4" /> : <MoonIcon className="h-4 w-4" />}
+            {isDark ? <SunIcon /> : <MoonIcon />}
           </Button>
         </div>
       </CardContent>

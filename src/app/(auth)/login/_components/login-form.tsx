@@ -32,7 +32,7 @@ export function LoginForm({ className, ...props }: React.ComponentProps<'div'>) 
   const [error, setError] = useState<string | null>(null);
 
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get('callbackUrl') || '/';
+  const callbackUrl = searchParams.get('callbackUrl') ?? '/';
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
