@@ -15,7 +15,6 @@ export default function TrpcCard() {
         <CardDescription>Type-safe API calls.</CardDescription>
       </CardHeader>
       <CardContent className="grow px-3 flex flex-col">
-        <p className="text-xs text-muted-foreground">Demo</p>
         <div className="p-3 flex-1 justify-between inset-shadow-sm rounded-md border bg-background flex flex-col gap-6">
           <div>
             <h3 className="text-base font-medium">Protected Route</h3>

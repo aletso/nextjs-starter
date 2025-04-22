@@ -27,7 +27,6 @@ export default async function AuthenticationCard() {
         <CardDescription>Authentication setup using BetterAuth.</CardDescription>
       </CardHeader>
       <CardContent className="grow px-3 flex flex-col">
-        <p className="text-xs text-muted-foreground">Demo</p>
         <div className="p-3 flex-1 justify-between inset-shadow-sm rounded-md border bg-background">
           {session ? (
             <Fragment>
