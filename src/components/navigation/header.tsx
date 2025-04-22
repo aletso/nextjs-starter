@@ -32,9 +32,9 @@ export default async function Header() {
 
   return (
     <header className="px-gutter h-header fixed top-0 inset-x-0 z-10 grid grid-cols-[1fr_auto_1fr] items-center">
-      <nav aria-label="Main navigation" className="flex items-center gap-6 text-sm">
+      <nav aria-label="Main navigation" className="flex items-center gap-1.5 text-sm">
         {navigationItems.map((item, index) => (
-          <Link key={index} href={item.href} className="hover:underline">
+          <Link key={index} href={item.href} className="hover:underline px-3">
             {item.label}
           </Link>
         ))}
