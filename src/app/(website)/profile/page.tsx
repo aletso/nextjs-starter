@@ -1,8 +1,13 @@
 import { getServerSession } from '@/server/auth/utils';
+import { redirect } from 'next/navigation';
 import { Fragment } from 'react';
 
 export default async function ProfilePage() {
   const session = await getServerSession();
+
+  if (!session?.user) {
+    redirect('/auth/signin?callbackUrl=/profile');
+  }
 
   return (
     <Fragment>
