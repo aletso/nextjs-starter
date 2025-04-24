@@ -9,22 +9,6 @@ const navigationItems = [
     label: 'Home',
     href: '/',
   },
-  {
-    label: 'API',
-    href: '/api',
-  },
-  {
-    label: 'Auth',
-    href: '/auth',
-  },
-  {
-    label: 'Database',
-    href: '/database',
-  },
-  {
-    label: 'UI',
-    href: '/ui',
-  },
 ];
 
 export default async function Header() {
