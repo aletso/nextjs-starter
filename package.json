@@ -1,5 +1,5 @@
 {
-  "name": "aletso-starter",
+  "name": "create-aletso-app",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -36,7 +36,6 @@
     "drizzle-orm": "^0.41.0",
     "lucide-react": "^0.501.0",
     "next": "^15.2.3",
-    "next-auth": "5.0.0-beta.25",
     "postgres": "^3.4.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -63,5 +62,10 @@
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.27.0"
   },
-  "packageManager": "pnpm@10.4.1"
+  "packageManager": "pnpm@10.4.1",
+  "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).",
+  "main": "eslint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
